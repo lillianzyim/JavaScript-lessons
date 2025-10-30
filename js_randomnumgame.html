@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // generate random number from 1-5
+        // let number = Math.floor(0,5); i tried okay
+        let computer = Math.ceil(Math.random() * 5)
+        // ask player for number 1-5
+        let player = prompt("Enter a number between 1 - 5")
+        // IF player and computer are the same, say you win
+        if (computer == player) {
+            window.alert("You win")
+        }
+        // ELSE, lose
+        else {
+            window.alert("You lose")
+        }
+
+    </script>
+</body>
+</html>

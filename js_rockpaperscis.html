@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ROCK PAPER SCISSORS
+        
+        // Make an array of possible values
+        let choices = ["rock","paper","scissors"]
+        // computer will randomly choose an item from the array. Use Math.random to make the selection
+        let computer = choices[Math.floor(Math.random()*4)]
+        console.log(computer)
+        // Have the player type rock, paper, or scissors. add .toLowerCase() at the end of the prompt
+        let player = prompt("Type rock, paper, or scissors").toLowerCase()
+        // build the logic. Rocks beats scissors, scissors beats paper, paper beats rock
+        if ((computer == "rock") && (player == "paper")) {
+            window.alert("Computer: " + computer + "; Player wins")
+        }
+        else if ((computer == "paper") && (player == "scissors")) {
+            window.alert("Computer: " + computer + "; Player wins")
+        }
+        else if ((computer == "scissors") && (player == "rock")) {
+            window.alert("Computer: " + computer + "; Player wins")
+        }
+        else {
+            window.alert("Computer: " + computer + "; Computer wins")
+        }
+        // in javascript, and &&, or  ||
+
+    </script>
+</body>
+</html>
