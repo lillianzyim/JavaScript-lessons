@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Tell the players they can only enter numbers between 1 and 5
+        // get a number from the player
+        let player = prompt("Only enter a number between 1 and 5")
+            
+                
+    // if the players enter a number between 1 through 5, tell player two if they won or lost
+        // computer generates number between 1 and 5
+        let computer = Math.ceil(Math.random() * 5)
+            // if player number is equal or greater than 1 OR equal or less than 5
+        if ((player >= 1) && (player <= 5)) {
+            // compare and check computer number to player number
+            // if computer and player are equal
+            if (computer == player) {
+                // window alert "You Win"
+                window.alert("You Win")
+            }
+            // else if computer and player are different
+            else if (computer != player) {
+                // window alert "Lose"
+                window.alert("You Lose")
+            }
+            // output all values to the window alert.
+            window.alert("Computer: "+computer +" Player: "+player)
+        }
+
+        
+        // if they enter anything else that is not 1 through 5, tell them that they cannot follow directions
+        // else player number is less than 1 or greater than 5
+        else if (!(player >=1) || !(player<=5)) {
+            // window alert "YOU CANNOT FOLLOW DIRECTIONS"
+            window.alert("YOU CANNOT FOLLOW DIRECTIONS")
+        
+        }
+                
+
+// simplified algo logic
+// generate a player number
+// if player number is equal to or greater than 1 and less than or equal to 5
+    // generate a computer number
+    // if player number is equal to computer number
+        // window alert you win
+    // else
+        // window alert you lose
+// else
+    // window alert you cannot follow directions
+
+
+    </script>
+</body>
+</html>
