@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // we will be creating a while loop that makes two people battle
+
+        // build a variable for hit points for player 1
+        let player1 = 30
+        // build a variable for hit points for player 2
+        let player2 = 30
+
+        // in a while loop
+        while (true) {
+            // generate a random number for player 1
+            let hit1 = Math.ceil(Math.random() * 5)
+            // generate a random number for player 2
+            let hit2 = Math.ceil(Math.random() * 5)
+
+            // subtract the random number from player 1 from player 2's hit points
+            // player2 -= hit1
+            player2 = player2 - hit1
+            console.log(player2)
+            // subtract the random number from player 2 from player 1's hit points
+            player1 = player1 - hit2
+            console.log(player1)
+            // if player 2 hit points is less than or equal to zero
+                if (player2 <= 0) {
+                    // player 1 wins
+                    console.log("Player 2 died, Player 1 wins")
+                    break
+                }
+
+                // if player 1 hit points is less than or equal to zero
+                else if (player1 <= 0) {
+                    // player 2 wins
+                    console.log("Player 1 died, Player 2 wins")
+                    break
+                }
+        }
+
+    </script>
+</body>
+</html>
