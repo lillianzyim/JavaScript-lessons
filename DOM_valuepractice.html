@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 27vw;
+            height: 4.3vh;
+            color: dodgerblue;
+            border-style: dashed;
+            border-color: pink;
+            box-shadow: 10px 10px 10px chartreuse;
+            transform: skewX(-20deg);
+        }
+    </style>
+    <script>
+        function sayhello() {
+            // first we get the value from the input field AND save it as a variable
+            let firstname = document.getElementById('firstname').value
+            // second, output the value to the placeholder and say "hello" firstname
+            document.getElementById('placeholder').innerHTML = "Hello " + firstname
+            // third, clear the input field for good user experience
+                // get the value of the input field and make it nothing
+            document.getElementById('firstname').value = ""
+        }
+
+
+    </script>
+</head>
+<body>
+    <!-- build an input field -->
+     <p>Enter your first name</p>
+    <input id="firstname">
+
+    <!-- create a button that activates a function -->
+    <button onclick="sayhello()">ENTER</button>
+
+    <!-- create a h1 area where the value will be placed on the screen -->
+     <h1 id="placeholder"></h1>
+
+</body>
+</html>

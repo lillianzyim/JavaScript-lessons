@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function goodbye() {
+            // i will get the first paragraph of the DOM and change the value
+            document.querySelector('p').innerHTML = "Goodbye"
+        }
+        function changename() {
+            // i will get the ID of name from the DOM and change the value
+            document.getElementById('name').innerHTML = "ZhongXina"
+        }
+        function createlink() {
+            // i will get the ID of link from the DOM and create a new a href link
+            document.getElementById('link').innerHTML = "<a href='https://www.google.com'>Google</a>"
+        }
+        function changeclasses() {
+            // i will get the class called title and change values
+            // document.getElementsByClassName('title')[1].innerHTML = "Middle"
+            
+            // **********
+            // use a FOR loop to change all the class name 'title' to say "No more school"
+                // create iterator that starts at 0 and goes up to 4
+                // letter i is a local variable
+                // this for loop will run 4 times starting at 0 (it goes 0, 1, 2, 3)
+            for (let i = 0; i < 4; i++) {
+                document.getElementsByClassName('title')[i].innerHTML = "No more school"
+            }
+        }
+        function change_all_paragraphs() {
+            for (let i = 0; i < 3; i++) {
+                document.getElementsByTagName('p')[i].innerHTML = ""
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>Hello</p>
+    <button onclick = "goodbye()">Goodbye</button>
+    <!-- getElementById sample -->
+     <!-- name = ID -->
+    <p id="name">Kam</p>
+    <!-- changename() = function -->
+    <button onclick="changename()">Change name</button>
+    <!-- create a link from a blank space -->
+    <p id="link"></p>
+    <button onclick="createlink()">Create Link</button>
+
+
+    <!-- Create classes -->
+    <h2 class = "title">Roosevelt</h2>
+    <h2 class = "title">High</h2>
+    <h2 class = "title">School</h2>
+    <h2 class = "title">F103</h2>
+    <button onclick="changeclasses()">Change Classes</button>
+
+
+    <hr>
+    <button onclick="change_all_paragraphs()">Change all paragraphs</button>
+
+
+
+
+</body>
+</html>
