@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. store image in variable
+        let image = 'https://upload.wikimedia.org/wikipedia/en/1/12/NCT_127_-_Sticker.png'
+        
+        // 3. make function
+        function showsticker() {
+            // 5. call ID called placeholder and inject HTML into placeholder
+            document.getElementById('placeholder').innerHTML = `<img src='${image}'>`
+            // <img src=''> in html how to get an image
+        }
+
+        // build another button with a function that clears the screen
+        function clearscreen() {
+            // call ID called placeholder and change the HTML to nothing
+            document.getElementById('placeholder').innerHTML = ""
+        }
+    </script>
+
+    <!-- 2. make button outside the script jawn -->
+    <button onclick="showsticker()">Show Sticker</button>
+    <!-- 4. make a placeholder -->
+    <div id="placeholder"></div>
+    <button onclick="clearscreen()">Clear Screen</button>
+</body>
+</html>
+<!-- concatenation -->
+<!-- innerHTML = "Hello " + variablename here -->
+
+<!-- innerHTML = `Hello ${variablenamehere}` -->
