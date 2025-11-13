@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 20vw;
+            height: 10vh;
+            background-color: chartreuse;
+            border-radius: 20px 20px 20px 20px;
+            margin: 2vh;
+            font-size: 20px;
+            box-shadow: 10px 10px 10px green;
+            color: magenta;
+            border-style: dotted;
+            border-color:aqua;
+            font-family: monospace;
+        }
+        div {
+            font-size: 127px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // PURPOSE.
+        // BUILD A TOGGLE TO CHECK IF A VALUE IS EITHER ON OR OFF, THEN DO THE OPPOSITE.
+
+        // build a GLOBAL!!! variable that will store a state (true/false)
+        let state = true
+    
+        // build a button
+        function currentstate() {
+            // check to see if the current state is false
+            // if it is false
+            if (state == false) {
+                // set it to true
+                state = true
+                // print out to the DOM "Lights on"
+                document.getElementById('currentstateannouncer').textContent = "Lights on"
+
+            }
+            // if it is true
+            else {
+                // set it to false
+                state = false
+                // print out to the DOM "Lights off"
+                document.getElementById('currentstateannouncer').textContent = "Lights off"
+
+            }
+        }
+    </script>
+    <button onclick="currentstate()">Check Current State</button>
+    <div id="currentstateannouncer"></div>
+</body>
+</html>
