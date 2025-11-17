@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Create a function that adds a new paragraph
+        // every time you press the button, a new paragraph will say hello
+        function add_p() {
+            // Create a new paragraph HTML element. This must be bound to a variable which will be called later.
+            let p = document.createElement('p')
+            // Create a new text element that will be bound to a variable which will be connected to the element
+            // let txt = document.createTextNode('Hello there')
+
+            // could also use input value to replace text node
+            // but you need to make an input field (clue: .value) with the id 'username'
+            let txt = document.createTextNode(document.getElementById('username').value)
+
+            // I will now append the text(txt) to the paragraph(p) element using the appendChild function
+            p.appendChild(txt)
+            // Now that the txt is attached to the p element, I have to now attach the p element to the body of the document using the same appendChild function/method
+            document.body.appendChild(p)
+
+        }
+    </script>
+</head>
+<body>
+    <!-- creating an element YOU MUST HAVE QUOTATIONS -->
+    <button onclick="add_p()">Add Paragraph</button>
+</body>
+</html>

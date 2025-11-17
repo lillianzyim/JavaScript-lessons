@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function to get all the inputs and save them as a textnode, then append the document so the output will read "Hello (name) you live at {location} and your friend is {another name}"
+        function madliberator() {
+            let name = document.getElementById('name').value
+            let location = document.getElementById('location').value
+            let anothername = document.getElementById('anothername').value
+
+            let p1 = document.createElement('p')
+            let p2 = document.createElement('p')
+            let p3 = document.createElement('p')
+            // let txt = document.createTextNode(name)
+            // p.appendChild(txt)
+            // document.body.appendChild(p)
+            let q1 = document.createTextNode('Hello ' + name)
+            let q2 = document.createTextNode('You live at ' + location)
+            let q3 = document.createTextNode('and your friend is ' + anothername)
+            p1.appendChild(q1)
+            p2.appendChild(q2)
+            p3.appendChild(q3)
+            document.body.appendChild(p1)
+            document.body.appendChild(p2)
+            document.body.appendChild(p3)
+
+        // bonus clear the input fields when the button is pressed
+            document.getElementById('name').value = ""
+            document.getElementById('location').value = ""
+            document.getElementById('anothername').value = ""
+            
+
+        }
+    </script>
+</head>
+<body>
+    <!-- ask the user for their name using an input field  -->
+    <p>Enter your name: </p>
+    <input id="name">
+    <!-- ask the user for a location using an input field  -->
+    <p>Enter a location: </p>
+    <input id="location">
+    <!-- ask the user for another name using an input field -->
+    <p>Enter another name: </p>
+    <input id="anothername">
+
+    <!-- button to activate a FUNCTION onclick -->
+    <button onclick="madliberator()">MadLiberator!</button>
+
+</body>
+</html>
