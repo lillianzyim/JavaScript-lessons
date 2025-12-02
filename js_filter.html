@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="output"></h1>
+    <input id="newages"> 
+    <!-- Added! make a lil added message -->
+    <button onclick="addage()">Add Name</button>
+    <button onclick="showadults()">Show 18 and Over</button>
+    <script>
+        let count = 0
+        if (count < 3) {
+            let userchoice = document.getElementById 
+        }
+
+        function over18() {
+            let n = agearray.filter(
+                function(value) {
+                    return value >= 18;});
+                    document.getElementById('output').innerHTML = n
+        }
+
+
+
+        // ask for ages and push them into an array (5)
+        ages = []
+        function addage() {
+            ages.push(document.getElementById('newages'))
+        }
+        function showadults() {
+            document.getElementById('')
+            // list everyone older than 18 using the filter function
+            var adults = ages.filter(function(value){
+                return value >= 18;
+            })
+        console.log(adults)
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <!-- 1) Create an input field <input id> -->
+    <!-- <p>Enter some text: </p> -->
+    <input id="usertext">
+    <button onclick="showtext()">Show Text</button>
+    <button onclick="removetext()">Remove Text</button>
+
+    <script>
+    // 2) Create a function that takes the input and adds it to the DOM using
+        function showtext() {
+            // createElement - I am going to create a paragraph element
+            let  p = document.createElement('p')
+            // createTextNode
+            let t = document.createTextNode(document.getElementbyId('usertext').value)
+
+            // the element AND the textnode currently are UNBOUND to ANYTHING on this website. They are just floating in space.
+
+            // Now  take these floating unbound things and merge them. i am merging t (textnode) as a child of p (element). So in other words, p is adopting t.
+            // append textnode to element using appendChild
+            p.appendChild(t)
+
+            // but still, p is floating in space holding hands with t. p needs to be bound to the document, so i repeat the process of having the document.body adopt p
+            // append element to document body using appendChild
+            document.body.appendChild(p)
+        }
+
+
+        function removetext() {
+            // get the first element of the DOM ad save it as removeItem
+            let removeItem = document.getElementsByTagName("p")[0]
+            // Find out who the parent is of removeItem and save is as containerElement
+            let containerElement = removeItem.parentNode
+            // now that i know who removeItem's mommy is, I will remove the child from the mother.
+            containerElement.removeChild(removeItem)
+
+        }
+        
+    </script>
+    
+    
+
+
+</body>
+</html>

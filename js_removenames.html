@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Allow the user to enter 6 names -->
+    <p>Enter 6 names</p>
+    <input id="names">
+    <button onclick="addname()">Add up to 6 names</button>
+    <button onclick="removetext()">Remove names</button>
+    <!-- Randomly generate a number from 0 to 5 -->
+    <script>
+        let warn = ""
+        let rand = Math.ceil((Math.floor()*6)-1)
+            // <!-- Unless you build a conditional statement to check the total number of names -->
+            // <!-- Delete one of the names based on the random number -->
+        let names = 0
+            function showtext() {
+                if (names < 6) {
+                    document.getElementById('warn').innerHTML = ""
+                    let p = document.getElementById('p')
+                    let t = document.createTextNode(document.getElementById('usertext').value)
+                    p.appendChild(t)
+                    document.body.appendChild(p)
+                    document.getElementById('usertext').value = ""
+                    names += 1
+
+                }
+                else {
+                    document.getElementById('warn').innerHTML = "Full House"
+                }
+            }
+
+            // use a FOR lopp to get rid of all the children
+        function removetext() {
+            document.getElementById('warn').innerHTML = ""
+            // let r = Math.floor(Math.random()* names)
+            let removeItem = document.getElementsByTagName("p")[r]
+            let containerElement = removeItem.parentNode
+            containerElement.removeChild(removeItem)
+        }
+        
+    </script>
+</body>
+</html>

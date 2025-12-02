@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>search for something idk</p>
+    <input id="query">
+    <button onclick="searchfor()">Search</button>
+    <div id="stuff"></div>
+    <h1 id="output"></h1>
+    <script>
+        // var x = ["ice cream","potato","potato"]
+        // console.log(x.indexOf("potato"))
+        // 1 -- (first instance index pos 1)
+        
+        // console.log(x.indexOf("Banana"))
+        // -1 -- (not found)
+
+        //initial array
+        let x = ["a","b","b","c"]
+        console.log(x.indexOf("b",1))
+        console.log(x.lastIndexOf("b",1))
+        // shortcut way so i dont have to keep writing document.getElementById bazillion times
+        function g(e) {
+            return document.getElementById(e)
+        }
+        // a function to check what the user typed against the array
+        function searchfor() {
+            // search gets the value fro the input field called 'query'
+            let search = document.getElementById('query').value
+            // clear the input field
+            document.getElementById(search).value = ""
+
+            let index_of = x.indexOf(search)
+            // console.log('index of: ' + index_of)
+
+            // IF search is NOT EQUAL to -1, it DOES EXIST
+            if (index_of != -1) {
+                // using the shortcut i created for document.getElementById, I tell the user found at + index pos of the first appearance
+                g('output').innerHTML = "Found at " + index_of
+                // console.log(index_of)
+
+            }
+            // if it is equal to -1, i tell the user NOT FOUND
+            else {
+                // console.log("It does not exist")
+                g('output').innerHTML = "Not found"
+            }
+        }
+
+    </script>
+</body>
+</html>

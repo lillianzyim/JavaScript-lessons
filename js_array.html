@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Name: </p>
+    <!-- input field -->
+    <input id="user">
+    <button onclick="add()">Add</button>
+    <button onclick="check()">Check</button>
+    <!-- output place -->
+    <h1 id="output"></h1>
+    
+
+    <script>
+        function g(e) {
+            return document.getElementById(e)
+        }
+        // start with an empty array
+        var stuff = []
+        let name = document.getElementById("user").value
+        // (function add) ask the user to add a value to the array using a function
+        function add() {
+            document.getElementById("user").value = ""
+            console.log(stuff)
+            stuff.push(name)
+            
+        }
+        // (function check, includes) build a separate function to check for a value in the array
+        function check() {
+            console.log(stuff)
+            // if value is in array
+            if (stuff.includes(name)==true) {
+                // return true
+                console.log(stuff.includes(name))
+                g('output').innerHTML = "Found"
+
+            }
+            else {
+                // return false
+                g('output').textContent = "Not found"
+
+            }
+        }
+
+    </script>
+
+    <!-- <script>
+        let stuff = []
+        function add_to_array() {
+            stuff.push(document.getElementById("userinput").value)
+            document.getElementById('userinput')
+        }
+    </script> -->
+</body>
+</html>
