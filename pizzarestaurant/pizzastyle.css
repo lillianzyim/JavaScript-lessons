@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* YOU NEED THE . CUZ IT'S A CLASS DINGUS */
+.menuitem {
+    width: 30vw;
+    /* bg color js so you can see it, erase later */
+    background-color: lightgreen;
+}
