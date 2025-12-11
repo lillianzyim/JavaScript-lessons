@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            
+        }
+
+        #box1 {
+            background-color: red;
+        }
+        #box2 {
+            background-color: green;
+        }
+        #box3 {
+            background-color: blue;
+        }                
+    </style>
+</head>
+<body>
+    
+
+    <!-- create a button -->
+    <!-- when the button is pressed, it activates a function -->
+    <button onclick="changebg()">Change Background</button>
+    <button onclick="boxshadow()">Create box shadow</button>
+    <button onclick="highlight()">Highlight the important part of the text</button>
+    <button onclick="removebox()">Remove Box 2</button>
+
+    <div id="boxshadow"></div>
+    <!-- need single line/double span tags for restaurant project eek...-->
+    <span>Roosevelt High school coding teacher Mr. Kam. <span id="highlight">Secretly, Mr. Kam hates certain children</span></span>
+
+
+    <div id="box1">BOX 1</div>
+    <div id="box2">BOX 2</div>
+    <div id="box3">BOX 3</div>
+
+
+    <script>
+        // if the button is on, click again to turn it off
+        // by default ts is off, because when u open the page it's blank 
+        let bg_state = false
+        // the function will change the background of the web page to be an image instead of white using
+        function changebg() {
+            // if off
+            if (bg_state == false) {
+                // switch it on
+                bg_state = true
+                document.body.style.background = "url(chiikawa.png)";
+                // now set the backround to cover with
+                document.body.style.backgroundSize = "cover";
+            }
+            else {
+                // set to off
+                bg_state = false
+                document.body.style.background = "";
+            }    
+        
+        }
+        
+        // add shadow to a div box HUH
+        let bs_state = false
+        function boxshadow() {
+            if (bs_state == false) {
+                bs_state = true
+                document.getElementById('boxshadow').style.boxShadow = "20px 20px 5px black"
+            }
+            else {
+                bs_state = false
+                document.getElementById('boxshadow').style.boxShadow = ""
+            }   
+        }
+
+
+        function highlight() {
+            let hl_toggle = false
+            if (hl_toggle == false) {
+                // backgroundColor + background also works!
+                document.getElementById("highlight").style.background = "yellow"
+                hl_toggle = true
+            }
+            else {
+                document.getElementById("highlight").style.background = ""
+                hl_toggle = false
+            }
+        }
+
+        let box2_toggle = false
+        function removebox() {
+            if (box2_toggle == false) {
+                document.getElementById("box2").style.display = "none"
+                box2_toggle = true
+            }
+            else {
+                document.getElementById("box2").style.display = "block"
+                box2_toggle = false
+            }
+            // document.getElementById("box2").style.visibility = "hidden"
+            
+        }
+    </script>
+    
+
+</body>
+</html>

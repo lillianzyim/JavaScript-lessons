@@ -1,0 +1,55 @@
+<!-- super duper ultra broken -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol id="shopping"></ol>
+    <input id="newitem">
+    <button onclick="addlist()">Add to list</button>
+    <input id="olditem">
+    <button onclick="removelist()">Pick a number to remove from list</button>
+    <div id="listfull">LIST FULL</div>
+
+    <script>
+        // on default the list is not full yet
+        document.getElementById("listfull").style.visibility = "hidden"
+        
+        let shoplist = document.getElementById("shopping") 
+        function addlist() {
+            if ( idkwhattoputheregod <= 5) { //how to get length of ordered list???
+                document.getElementById("listfull").style.visibility = "hidden"
+                let item = document.getElementById("newitem").value
+
+                let newli = document.createElement('li');
+                let newliitem = document.createTextNode(item)
+                newli.appendChild(newliitem)
+                shoplist.appendChild(newli)
+                document.getElementById("newitem").value = "" //idk why my thing isnt working but i want to clear the input field
+            }
+            // else {
+                // document.getElementById("listfull").style.visibility = "visible"
+            // }
+        }
+        
+        function removelist() {
+            let removeItem = document.getElementsByTagName
+        }
+
+    </script>
+</body>
+</html>
+<!-- base off of js_appendChild.html -->
+
+<!-- Create a shopping list using HTML, CSS, and Javascript (HTML, JS, CSS)-->
+<!-- There should be NO window alerts -->
+<!-- Pull all values from input fields-->
+
+<!-- You are creating a shopping list that allows the user to enter 5 items -->
+<!-- They CANNOT enter more than 5 items. Say that the list is full -->
+        <!-- im having trouble with the 5 items limit part. -->
+<!-- Create a numbered list for those items -->
+<!-- Allow the user to delete an item from the list by its number -->

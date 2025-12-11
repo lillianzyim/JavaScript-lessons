@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="modebutton" onclick="togglemode()">Toggle Mode</button>
+    <p>In this sample, practice using a toggle to create a dark mode. If you touch your phone, I will be upset. <br><br>Click the chiikawa
+    </p>
+    <span id="chiikawa" onclick="exactamundo()"><img src="chiikawa.png"></span>
+    <div><img src="aibabyjungwoo.jpg"></div>
+    <script>
+        let mode_state = false
+        function togglemode() {
+            if (mode_state == false) {
+                mode_state = true
+                document.body.style.background ="black";
+                document.body.style.color ="white";
+                document.getElementById("modebutton").textContent = "Dark Mode"
+                
+            }
+            else {
+                mode_state = false
+                document.body.style.background ="white";
+                document.body.style.color="black";
+                document.getElementById("modebutton").textContent = "Light Mode"
+            }
+        }
+        function exactamundo() {
+            // document.getElementById("chiikawa").style.visibility = "hidden";
+            document.getElementById("chiikawa").innerHTML = " CORRECT ";
+            document.getElementById("chiikawa").style.fontSize = "2rem";
+            document.getElementById("chiikawa").style.color = "black";
+            document.getElementById("chiikawa").style.background = "chartreuse";
+
+        }
+
+    </script>
+</body>
+</html>
