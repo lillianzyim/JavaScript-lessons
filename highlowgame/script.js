@@ -2,12 +2,21 @@
 
 // create a score variable (global)
 let score = 0
+// create a
+
+// function to start the game
+score = 0
+
+// generate a hidden next number and just pass it on after
+    // number = newnumber type shi
+
+
 // initial number
 let computer = Math.ceil(Math.random()*10)
 console.log("current: " + computer)
 document.getElementById('currentnum').innerHTML = "Current number: " + computer
 // button's function duh
-function Answer() {
+function highlow() {
     // generate a random number between 1-10
     let computer = Math.ceil(Math.random()*10) 
     console.log("current: " + computer)
